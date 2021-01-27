@@ -1,0 +1,551 @@
+/*import fonts*/
+@font-face{
+    font-family:"Releway-regular";
+    src:url(fonts/Raleway-Regular.ttf);
+}
+@font-face{
+    font-family:"Releway-medium";
+    src:url(fonts/Raleway-Medium.ttf);
+}
+@font-face{
+    font-family:"Releway-bold";
+    src:url(fonts/Raleway-Bold.ttf);
+}
+@font-face{
+    font-family:"Releway-semi";
+    src:url(fonts/Raleway-SemiBold.ttf);
+}
+@font-face{
+    font-family:"Releway-black";
+    src:url(fonts/Raleway-Black.ttf);
+}
+@font-face{
+    font-family:"Releway-extra-bold";
+    src:url(fonts/Raleway-ExtraBold.ttf);
+}
+/*colours*/
+:root{
+    --primary :#d8b806;
+    --secondary :#030303;
+    --ternary :#1a1818f6;
+    --danger :#fc1e01;
+    --light :#f1f1e4;
+    --heaven :#fdfbfb;
+    --footer :#fca24e;
+    --pure :#f8f8f8;
+}
+/*Reset*/
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    -webkit-font-smoothing:antialiased;
+    font-family: "Releway-regular";
+}
+.container{
+    width: 100%;
+    padding: 0px 15px;
+    margin: 0px auto;
+}
+@media (min-width:576px){
+    .container{
+        max-width: 540px;
+
+    }
+}
+@media (min-width:768px){
+    .container{
+        max-width: 720px;
+        
+    }
+}
+@media (min-width:992px){
+    .container{
+        max-width: 960px;
+        
+    }
+}
+@media (min-width:1200px){
+    .container{
+        max-width: 1152px;
+        
+    }
+}
+.topbar{
+    background: var(--secondary);
+    color: var(--pure);
+    font-family: "Releway-semi";
+    padding: 0.75rem 0;
+}
+.topbar .auth > div a{
+    color: var(--pure);
+    text-decoration: none;
+}
+.auth > div img{
+    margin-right: 0.35rem;
+}
+.topbar .icon a{
+    margin-right: 0.6rem;
+}
+.diveder{
+    padding:0rem 1rem ;
+}
+/*root class */
+.flex{
+    display: flex;
+}
+.justify-cont{
+    justify-content: space-between;
+}
+.alin-item{
+    align-items: center;
+}
+.contact h5{
+    font-family: "Releway-black";
+    margin-bottom:0.25rem;
+}
+.contact h6{
+    font-family: "Releway-medium";
+    letter-spacing:0.055rem ;
+}
+.time h5{
+    font-family: "Releway-medium";
+    margin-bottom:0.75rem;
+    letter-spacing: 0.055rem;
+    color: var(--ternary);
+}
+.contact img{
+    margin-right: 1rem;
+}
+.time img{
+    margin: 1rem;
+}
+.top{
+    padding: 1.5rem 0;
+}
+.justify-centre{
+    justify-content: center;
+}
+.navbar a{
+    text-decoration: none;
+    color: var(--secondary);
+    font-family: "Releway-semibold";
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    transition: all .3s ease;
+}
+.active{
+    background: var(--primary);
+    color: var(--pure);
+}
+.navbar a:hover{
+    background: var(--primary);
+    color: var(--pure);
+}
+.magic-shadow{
+    position: relative;
+    background: var(--heaven);
+}
+.magic-shadow::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 60px;
+    background-image:url(icons/shadow.svg) ;
+    bottom:-22px ;
+    position: absolute;
+    background-repeat: no-repeat;
+    z-index: -1;
+    background-position: center;
+    left: 50%;
+    transform: translate(-50%);
+}
+.magic-shadow-sm{
+    position: relative;
+    background: var(--heaven);
+}
+.magic-shadow-sm::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 60px;
+    background-image:url(icons/shadow-sm.svg) ;
+    bottom:-22px ;
+    position: absolute;
+    background-repeat: no-repeat;
+    z-index: -1;
+    background-position: center;
+    left: 50%;
+    transform: translate(-50%);
+}
+.hero{
+    height: 600px;
+    background-image: url(images/hero.png);
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.hero .container{
+    position: relative
+}
+.welcom{
+    margin-bottom: 0.25rem;
+}
+.welcom span{
+    font-family: "Releway-bold";
+    color: var(--secondary);
+    margin-right: 0.75rem;
+}
+.hero h1{
+    font-family: "Realeway-extra-bold";
+    color: var(--secondary);
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+}
+.hero h1 span{
+    color: var(--primary);
+}
+.hero p{
+    font-family: "Releway-medium";
+    width: 50%;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+/*buttom utility class*/
+.btn{
+    padding: 0.75rem 0.75rem;
+    border-radius: 4px;
+    line-height: 0.8;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition:all 0.3s ease;
+    border: 1px solid transparent;
+}
+.btn-primary{
+    background-color: var(--primary);
+    color: var(--heaven);
+}
+.btn-primary:hover{
+    background-color: var(--heaven);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+.btn-secondary{
+    background-color: var(--secondary);
+    color: var(--heaven);
+}
+.btn-secondary:hover{
+    background-color: var(--heaven);
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+}
+.hero button:first-child{
+    margin-right:0.50rem ;
+}
+.hero-image img{
+    position: absolute;
+    top: -40px;
+    right: 40px;
+}
+section{
+    padding: 4rem 0;
+}
+.topproducts{
+    background:var(--light);
+}
+.section-heading{
+    font-family: "Releway-bold";
+    position: relative;
+    text-align: center;
+    margin-bottom: 6rem;
+
+}
+.section-heading::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 30px;
+    background-image:url(icons/hr.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: -40px;
+}
+.foodcart{
+    background:var(--heaven);
+    padding:1.5rem 0;
+    border-radius: 4px;
+}
+.foodcart .productimage img{
+    width: 80%;
+    height:200px;
+    object-fit: contain;
+    padding-bottom: 1rem;
+}
+hr{
+    border: 1px solid var(--light);
+    opacity: 0.8;
+    margin: 1rem 0;
+}
+.foodcart h2{
+    font-family: "Realeway-bold";
+    font-size: 1.3rem;
+    margin-bottom: 0.25rem;
+}
+/*utility class of text*/
+.text-cart{
+    text-align: center;
+}
+.stars{
+    margin-bottom: 0.5rem;
+}
+.stars img{
+    margin-right: 0.25rem;
+}
+.price{
+    font-family: "Releway-medium";
+    color: var(--danger);
+    margin-bottom: 1rem;
+}
+.foodcart button{
+    font-family: "Releway-medium";
+    color: var(--secondary);
+    background: var(--heaven);
+    border: 2px solid var(--primary);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.foodcart button:hover{
+   background: var(--primary);
+   color:var(--heaven);     
+}
+.foodcart button img{
+    background: var(--primary);
+    padding: 00.50rem;
+    height: 32px;
+    margin-right: 1.2rem;
+}
+.slick-slide{
+    margin: 0 27px;
+}
+.slick-list{
+    margin: -27px;
+}
+.slider-btn{
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: var(--primary);
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+}
+.slider{
+    position: relative;
+}
+.prev-btn{
+    position:absolute;
+    top: 46%;
+    left: -3rem;
+    z-index: 1;
+}
+.next-btn{
+    position:absolute;
+    top: 46%;
+    right:-3rem;
+    z-index: 1;
+}
+.btn-reper{
+    margin-top: 2rem;   
+}
+.slick-track{
+    padding: 1rem 0;
+}
+.about-meal img{
+    width: 85%;
+}
+.flex-1{
+    flex:1;
+}
+.about-meal h2{
+    font-family: "Releway-bold";
+    font-size: 1.4rem;
+    color: var(--secondary);
+    margin-bottom: 2rem;
+    line-height: 1.3;
+}
+.about-meal p{
+    line-height: 1.7;
+    margin-bottom: 4rem;
+}
+.our-services{
+    background: var(--light);
+    position: relative;
+    z-index: 0;
+}
+.service-card{
+    background: var(--heaven);
+    text-align: center;
+    padding: 2rem;
+    padding-top: 4rem;
+    position: relative;
+    border-radius: 4px;
+    margin-right: 2rem;
+}
+.service-card .card-wreper{
+    margin-right: -2rem;
+    margin-top: 8rem;
+}
+.service-card .icon{
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.service-card h2{
+    font-family: "Releway-bold";
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+.service-card p{
+    line-height: 1.6;
+    margin-bottom:1rem;
+}
+/*utelety class primary*/
+.text-pramery{
+    color: var(--primary);
+}
+.big-data{
+    background: linear-gradient(
+        rgba(35,43,56,0.9),
+        rgba(35,43,56,0.9)
+    ),url(images/food-table.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.big-data .timer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: -2rem;
+    margin-bottom: 2rem;
+}
+.big-data .timer div{
+    margin-right: 2rem;
+    background: var(--primary);
+    width: 150px;
+    height: 150px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.big-data .timer div span:first-child{
+    font-family: "Releway-semi";
+    font-size: 2.5rem;
+    color: var(--heaven);
+    margin-bottom: 0.05rem;
+}
+.timer div span:last-child{
+    font-family: "Releway-medium";
+    color: var(--heaven);
+}
+.text-pure{
+    color: var(--pure);
+}
+.latest-news{
+    background: var(--light);
+    position: relative;
+    z-index: 0;
+}
+.article-wreper{
+    margin-right: -2rem;
+} 
+.card{
+    margin-right: 2rem;
+    background: var(--heaven);
+    border-radius: 4px;
+}
+.card img{
+    width: 100%;
+}
+.card-containt{
+    padding: 2px;
+}
+.post-data{
+    margin-bottom: 1rem;
+}
+.coment-cont{
+    margin-left: 1rem;
+}
+.card-containt h2{
+    font-family: "Realeway-bold";
+    font-size: 1.3rem;
+    margin-bottom: 1rem;  
+}
+.card-containt p{
+    line-height: 1.6;
+}
+.btn-wreper{
+    margin-top: 2rem;
+}
+.subscription{
+    background: var(--primary);
+}
+.subscription .container > div:first-child img{
+    width: 90%;
+}
+.subscription .container div:first-child{
+    flex:1;
+}
+.subscription .container div:last-child{
+    flex:1;
+}
+.subscription h1{
+    font-family: "Releway-bold";
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.subscription p{
+    font-family: "Releway-medium";
+    line-height: 1.6rem;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+.input-wrap{
+    background: var(--heaven);
+    display: flex;
+    padding: 0.3rem;
+    border-radius: 4px;
+}
+.input-wrap input{
+    width: 100%;
+    border: none;
+    padding: 0 1rem;
+    font-size: 1rem;
+    outline: none;
+}
+.input-wrap button{
+    padding: 0.8rem 2rem;
+    border: none;
+    background: var(--primary);
+    color: var(--heaven);
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+}
+.input-wrap button:hover{
+    background: var(--secondary);
+}
